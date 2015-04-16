@@ -23,6 +23,8 @@
   Beyond 45 it is not possible ensure all the above password constraints are met. Usually, the first constraint "occurrence of same character once" fails and take too long to complete the generation
   
     Usage
+
         //Generate password of length 6 and no duplicate tokens
          StrongPassword.generate(6, false);
-        //Generate password of lenthg 12 and allow duplicate tokens                  StrongPassword.generate(6, true);
+        //Generate password of lenthg 12 and allow duplicate tokens                  
+        StrongPassword.generate(6, true);
