@@ -112,7 +112,7 @@ public class StrongPassword {
 		// <code> SCOPE_CURRENT_LEN </code> should be individual state of an object.
 		// we still have the comfort to invoke this method,
 		// </code> StrongPassword.generate(...) </code>
-		StrongPassword curreentSession = new StrongPassword();
+		StrongPassword currentSession = new StrongPassword();
 		if(passwordLength < MIN_PASSWORD_LEN) {
 
 			throw new IllegalArgumentException("minimum password length is 6");
