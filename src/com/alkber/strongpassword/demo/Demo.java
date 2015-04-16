@@ -13,8 +13,8 @@ public class Demo {
 		System.out.println("without duplicate tokens");
 		System.out.println("min length 6");
 		System.out.println(StrongPassword.generate(6, false));
-		System.out.println("length 12");
-		System.out.println(StrongPassword.generate(12, false));
+		System.out.println("length 15");
+		System.out.println(StrongPassword.generate(15, false));
 		System.out.println("max length 45");
 		System.out.println(StrongPassword.generate(45, false));
 		System.out.println("with duplicate tokens");
