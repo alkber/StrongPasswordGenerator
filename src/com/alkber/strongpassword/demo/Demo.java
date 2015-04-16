@@ -1,4 +1,4 @@
-package com.alkber.strongpassword.com.albker.strongpassword.demo;
+package com.alkber.strongpassword.demo;
 
 import com.alkber.strongpassword.StrongPassword;
 

@@ -1,4 +1,4 @@
-package com.alkber.strongpassword.com.albker.strongpassword.test;
+package com.alkber.strongpassword.test;
 
 import com.alkber.strongpassword.StrongPassword;
 
@@ -6,9 +6,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * Password missing a digit character
+ * Password missing uppercase character
  */
-public class Test0000000013 {
+public class Test0000000011 {
 
 	public static void main(String... arg) {
 
@@ -22,26 +22,26 @@ public class Test0000000013 {
 			checkPasswordQuality.setAccessible(true);
 
 			boolean returnValue = (Boolean) checkPasswordQuality.invoke(strongPasswordObject,
-					"y/GI,dr]");
+					"y/7,d6r4]0");
 
 			if(returnValue == false) {
 
-				System.out.println(Test0000000013.class.getCanonicalName() + ": passed");
+				System.out.println(Test0000000011.class.getCanonicalName() + ": passed");
 			} else {
 
-				System.out.println(Test0000000013.class.getCanonicalName() + ": failed");
+				System.out.println(Test0000000011.class.getCanonicalName() + ": failed");
 			}
 
 		} catch(NoSuchMethodException e) {
 
-			System.out.println(Test0000000013.class.getCanonicalName() + ": failed");
+			System.out.println(Test0000000011.class.getCanonicalName() + ": failed");
 
 		} catch(InvocationTargetException e) {
 
-			System.out.println(Test0000000013.class.getCanonicalName() + ": failed");
+			System.out.println(Test0000000011.class.getCanonicalName() + ": failed");
 		} catch(IllegalAccessException e) {
 
-			System.out.println(Test0000000013.class.getCanonicalName() + ": failed");
+			System.out.println(Test0000000011.class.getCanonicalName() + ": failed");
 		}
 	}
 }

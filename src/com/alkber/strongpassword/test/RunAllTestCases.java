@@ -1,4 +1,4 @@
-package com.alkber.strongpassword.com.albker.strongpassword;
+package com.alkber.strongpassword.test;
 
 
 import java.lang.reflect.InvocationTargetException;
@@ -13,7 +13,7 @@ public class RunAllTestCases {
 
 	public static void main(String... args) {
 
-		String testPackage = "com.alkber.strongpassword.com.albker.strongpassword.test.";
+		String testPackage = "com.alkber.strongpassword.test.";
 
 		int totalTestCases = 15;
 
