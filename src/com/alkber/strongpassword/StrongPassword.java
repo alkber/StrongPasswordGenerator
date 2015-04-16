@@ -131,8 +131,8 @@ public class StrongPassword {
 		}
 
 		// initial scope of password characters
-		curreentSession.SCOPE_CURRENT = SCOPE_FULL;
-		curreentSession.SCOPE_CURRENT_LEN = curreentSession.SCOPE_CURRENT.length();
+		currentSession.SCOPE_CURRENT = SCOPE_FULL;
+		currentSession.SCOPE_CURRENT_LEN = currentSession.SCOPE_CURRENT.length();
 		String  password           = "";
 		boolean qualityCheckFailed = true;
 
@@ -145,17 +145,17 @@ public class StrongPassword {
 				char token;
 				if(allowDuplicateToken) {
 
-					token = curreentSession.SCOPE_CURRENT.charAt(rd.nextInt(curreentSession
+					token = currentSession.SCOPE_CURRENT.charAt(rd.nextInt(currentSession
 							.SCOPE_CURRENT_LEN));
 				} else {
 
-					token = curreentSession.getNextToken(password);
+					token = currentSession.getNextToken(password);
 				}
 				password = password + token;
-				curreentSession.setNextScope(token);
+				currentSession.setNextScope(token);
 			}
 
-			qualityCheckFailed = !curreentSession.checkPasswordQuality(password);
+			qualityCheckFailed = !currentSession.checkPasswordQuality(password);
 
 		} while(qualityCheckFailed);
 
