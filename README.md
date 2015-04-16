@@ -12,11 +12,11 @@
     - At most one occurrence of a character from the given set.
     - There are no consecutive occurrence of characters from the same set.
   
-        #allowDuplicate = false
+             allowDuplicate = false
             -Minimum input password length is 6
             -Maximum input password length is 45
    
-        #allowDuplicate = true 
+             allowDuplicate = true 
             -Minimum input password length is 6
             -Maximum input password length is 100
   
