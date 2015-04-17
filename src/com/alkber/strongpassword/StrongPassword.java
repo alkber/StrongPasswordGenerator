@@ -102,7 +102,7 @@ public class StrongPassword {
 	 *
 	 * @param passwordLength required password string length
 	 * @return password
-	 *              generated password
+	 * generated password
 	 * @throws IllegalArgumentException if password doesn't meet minimum password length
 	 */
 	public static String generate(int passwordLength, boolean allowDuplicateToken) throws
@@ -133,12 +133,12 @@ public class StrongPassword {
 		// initial scope of password characters
 		currentSession.SCOPE_CURRENT = SCOPE_FULL;
 		currentSession.SCOPE_CURRENT_LEN = currentSession.SCOPE_CURRENT.length();
-		String  password           = "";
-		boolean qualityCheckFailed = true;
+		StringBuilder password           = new StringBuilder("");
+		boolean       qualityCheckFailed = true;
 
 		do {
 			// reset the password as QA failed
-			password = "";
+			password = new StringBuilder("");
 
 			for(int i = 0;i < passwordLength;i++) {
 
@@ -149,17 +149,17 @@ public class StrongPassword {
 							.SCOPE_CURRENT_LEN));
 				} else {
 
-					token = currentSession.getNextToken(password);
+					token = currentSession.getNextToken(password.toString());
 				}
-				password = password + token;
+				password = password.append(token);
 				currentSession.setNextScope(token);
 			}
 
-			qualityCheckFailed = !currentSession.checkPasswordQuality(password);
+			qualityCheckFailed = !currentSession.checkPasswordQuality(password.toString());
 
 		} while(qualityCheckFailed);
 
-		return password;
+		return password.toString();
 	}
 
 	/**
